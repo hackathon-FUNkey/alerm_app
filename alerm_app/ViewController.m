@@ -17,7 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"alarm" ofType:@"mp3"];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(url), &sound);
+    
     if([[self getCurrentTime] isEqualToString:[self getMyTime]]){
+        AudioServicesPlaySystemSound(sound);
         NSLog(@"Same Time");
     }
     
@@ -46,7 +51,7 @@
 }
 
 - (NSString *)getMyTime {
-    NSString *myTime = @"19時20分";
+    NSString *myTime = @"20時12分";
     
     return myTime;
 }
