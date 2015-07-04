@@ -10,5 +10,9 @@
 
 @interface SetTimeViewController : UIViewController
 - (IBAction)BackButtonAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UIDatePicker *myDatePicker;
+- (IBAction)changeDate:(id)sender;
+
+
 
 @end

@@ -275,20 +275,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rhr-fQ-99z">
-                                <rect key="frame" x="32" y="220" width="256" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="457704480.34181702">
-                                    <!--2015-07-04 12:08:00 +0000-->
-                                </date>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OV-0W-uBf">
-                                <rect key="frame" x="27" y="146" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-nK-JLw">
-                                <rect key="frame" x="-2" y="22" width="324" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-nK-JLw">
+                                <rect key="frame" x="-2" y="20" width="324" height="44"/>
                                 <items>
                                     <navigationItem title="時刻の設定" id="FTF-gZ-sbT">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="NBl-bY-mHp">
@@ -296,27 +284,38 @@
                                                 <action selector="BackButtonAction:" destination="o7i-KP-NUt" id="9LN-QW-n7N"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="保存" id="uh6-cx-mmh">
+                                            <connections>
+                                                <segue destination="XHy-eD-7wK" kind="push" id="Re2-z3-pnk"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rhr-fQ-99z">
+                                <rect key="frame" x="0.0" y="64" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="457704480.34181702">
+                                    <!--2015-07-04 12:08:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="changeDate:" destination="o7i-KP-NUt" eventType="valueChanged" id="IpC-VX-zB4"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Rhr-fQ-99z" firstAttribute="top" secondItem="5OV-0W-uBf" secondAttribute="bottom" constant="53" id="0JC-2N-91o"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5OV-0W-uBf" secondAttribute="trailing" constant="235" id="2gq-di-cRB"/>
-                            <constraint firstItem="vuT-nK-JLw" firstAttribute="top" secondItem="f31-ux-Ezo" secondAttribute="bottom" constant="2" id="4Xj-1t-xZW"/>
-                            <constraint firstItem="Ocf-KR-pzb" firstAttribute="top" secondItem="Rhr-fQ-99z" secondAttribute="bottom" constant="186" id="58l-40-xeC"/>
-                            <constraint firstItem="5OV-0W-uBf" firstAttribute="leading" secondItem="sjU-pR-zQH" secondAttribute="leadingMargin" constant="11" id="FR7-uv-nmb"/>
-                            <constraint firstItem="vuT-nK-JLw" firstAttribute="leading" secondItem="sjU-pR-zQH" secondAttribute="leadingMargin" constant="-18" id="IMd-yc-Jsv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Rhr-fQ-99z" secondAttribute="trailing" constant="16" id="Zfm-qz-oYe"/>
-                            <constraint firstItem="Rhr-fQ-99z" firstAttribute="top" secondItem="5OV-0W-uBf" secondAttribute="bottom" constant="53" id="a3d-QE-Icg"/>
-                            <constraint firstItem="5OV-0W-uBf" firstAttribute="top" secondItem="vuT-nK-JLw" secondAttribute="bottom" constant="80" id="cdI-fP-0G8"/>
-                            <constraint firstItem="5OV-0W-uBf" firstAttribute="top" secondItem="vuT-nK-JLw" secondAttribute="bottom" constant="80" id="qQa-lK-rW8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vuT-nK-JLw" secondAttribute="trailing" constant="-18" id="qZL-VR-cKQ"/>
-                            <constraint firstItem="Rhr-fQ-99z" firstAttribute="leading" secondItem="sjU-pR-zQH" secondAttribute="leadingMargin" constant="16" id="z23-sx-Nu7"/>
+                            <constraint firstItem="vuT-nK-JLw" firstAttribute="bottom" secondItem="Rhr-fQ-99z" secondAttribute="top" id="3I3-hO-rxU"/>
+                            <constraint firstItem="vuT-nK-JLw" firstAttribute="leading" secondItem="sjU-pR-zQH" secondAttribute="leadingMargin" constant="-18" id="Iny-q9-dQm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rhr-fQ-99z" secondAttribute="trailing" constant="-16" id="acO-RS-TfR"/>
+                            <constraint firstItem="Rhr-fQ-99z" firstAttribute="leading" secondItem="sjU-pR-zQH" secondAttribute="leadingMargin" constant="-16" id="cT6-Db-CPn"/>
+                            <constraint firstItem="vuT-nK-JLw" firstAttribute="top" secondItem="f31-ux-Ezo" secondAttribute="bottom" id="qOE-89-o9U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vuT-nK-JLw" secondAttribute="trailing" constant="-18" id="rzq-F4-LBS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yuO-2b-6PA"/>
+                    <connections>
+                        <outlet property="myDatePicker" destination="Rhr-fQ-99z" id="re9-OY-xSC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTI-BQ-vpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -394,4 +393,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Re2-z3-pnk"/>
+    </inferredMetricsTieBreakers>
 </document>
