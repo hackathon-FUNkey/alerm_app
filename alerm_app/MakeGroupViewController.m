@@ -36,10 +36,10 @@
         NSString *encode_msg = [[array valueForKeyPath:@"name"] objectAtIndex:i];
         NSLog(@"%@", [encode_msg stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]);
         if([flagArray objectAtIndex:i]==[NSNumber numberWithInteger:1]){
-        [selectNameArray addObject:[encode_msg stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            [selectNameArray addObject:[encode_msg stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         }
     }
-
+    
     
     
 }
@@ -73,14 +73,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)BackButtonAction:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
@@ -88,23 +88,32 @@
 
 - (IBAction)saveButtonAction:(id)sender {
     NSLog(@"%@",mytext);
-     NSLog(@"%@",selectNameArray);
+    NSLog(@"%@",selectNameArray);
     
-//    NSString *url = @"http://175.184.46.172/server/postUserGroupName.php";
-//    NSString *param = [NSString stringWithFormat:@"data1=%@&data2=%@", mytext, selectNameArray];
-//    
-//    NSMutableURLRequest *request;
-//    request = [[NSMutableURLRequest alloc] init];
-//    [request setHTTPMethod:@"POST"];
-//    [request setURL: [NSURL URLWithString:url]];
-//    [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
-//    [request setTimeoutInterval:20];
-//    [request setHTTPShouldHandleCookies:FALSE];
-//    [request setHTTPBody:[param dataUsingEncoding:NSUTF8StringEncoding]];
-//    
-//    NSURLResponse *response = nil;
-//    NSError *error = nil;
-//    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *selectname = @"";
+    selectname = [selectname stringByAppendingString:[selectNameArray objectAtIndex:0]];
+    for(int k =1;k<selectNameArray.count;k++){
+        selectname = [selectname stringByAppendingString:@","];
+        selectname = [selectname stringByAppendingString:[selectNameArray objectAtIndex:k]];
+        
+    }
+    NSLog(@"%@",selectname);
+    
+    NSString *url = @"http://175.184.46.172/server/postUserGroupName.php";
+    NSString *param = [NSString stringWithFormat:@"data1=%@&data2=%@", mytext, selectname];
+    
+    NSMutableURLRequest *request;
+    request = [[NSMutableURLRequest alloc] init];
+    [request setHTTPMethod:@"POST"];
+    [request setURL: [NSURL URLWithString:url]];
+    [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
+    [request setTimeoutInterval:20];
+    [request setHTTPShouldHandleCookies:FALSE];
+    [request setHTTPBody:[param dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
 }
 
 
