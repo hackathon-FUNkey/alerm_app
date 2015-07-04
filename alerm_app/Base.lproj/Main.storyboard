@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o6l-SN-Nkn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o6l-SN-Nkn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -154,12 +154,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="U23-I4-4mf">
-                                <rect key="frame" x="0.0" y="71" width="320" height="497"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSv-qh-zo4">
-                                <rect key="frame" x="0.0" y="27" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="グループ一覧" id="Mas-Iy-GjW">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="jIg-2P-WhB">
@@ -170,22 +166,27 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="U23-I4-4mf">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="U23-I4-4mf" secondAttribute="trailing" constant="-16" id="4YU-iz-iWh"/>
-                            <constraint firstItem="U23-I4-4mf" firstAttribute="top" secondItem="PSv-qh-zo4" secondAttribute="bottom" id="9bE-ZP-VWw"/>
-                            <constraint firstItem="U23-I4-4mf" firstAttribute="top" secondItem="PSv-qh-zo4" secondAttribute="bottom" id="Fln-aQ-IXE"/>
-                            <constraint firstItem="gXN-WG-b1G" firstAttribute="top" secondItem="U23-I4-4mf" secondAttribute="bottom" id="GZd-hU-0xZ"/>
-                            <constraint firstItem="PSv-qh-zo4" firstAttribute="top" secondItem="yre-hz-2TD" secondAttribute="bottom" constant="7" id="NQY-ec-67l"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PSv-qh-zo4" secondAttribute="trailing" constant="-16" id="faN-sF-4JG"/>
-                            <constraint firstItem="PSv-qh-zo4" firstAttribute="leading" secondItem="HZS-uJ-gbC" secondAttribute="leadingMargin" constant="-16" id="gFd-9h-uEq"/>
-                            <constraint firstItem="U23-I4-4mf" firstAttribute="leading" secondItem="HZS-uJ-gbC" secondAttribute="leadingMargin" constant="-16" id="yZW-hA-7Rc"/>
+                            <constraint firstItem="PSv-qh-zo4" firstAttribute="leading" secondItem="HZS-uJ-gbC" secondAttribute="leadingMargin" constant="-16" id="2oK-v8-eYz"/>
+                            <constraint firstItem="gXN-WG-b1G" firstAttribute="top" secondItem="U23-I4-4mf" secondAttribute="bottom" id="QMG-cb-k1O"/>
+                            <constraint firstItem="U23-I4-4mf" firstAttribute="top" secondItem="PSv-qh-zo4" secondAttribute="bottom" id="RhY-hK-1qB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PSv-qh-zo4" secondAttribute="trailing" constant="-16" id="Zjd-kZ-coF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U23-I4-4mf" secondAttribute="trailing" constant="-16" id="a9r-mp-Qh0"/>
+                            <constraint firstItem="U23-I4-4mf" firstAttribute="top" secondItem="PSv-qh-zo4" secondAttribute="bottom" id="e0e-AX-ReT"/>
+                            <constraint firstItem="PSv-qh-zo4" firstAttribute="top" secondItem="yre-hz-2TD" secondAttribute="bottom" id="htS-Qg-TIj"/>
+                            <constraint firstItem="U23-I4-4mf" firstAttribute="leading" secondItem="HZS-uJ-gbC" secondAttribute="leadingMargin" constant="-16" id="tWW-c7-ju6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="64H-tT-cZk"/>
                     <connections>
-                        <segue destination="XHy-eD-7wK" kind="push" id="cz0-ws-uFs"/>
+                        <outlet property="myTableView" destination="U23-I4-4mf" id="CPJ-A5-QBl"/>
+                        <segue destination="XHy-eD-7wK" kind="push" identifier="showDetail" id="cz0-ws-uFs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfP-fC-Gi7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -274,19 +275,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rhr-fQ-99z">
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rhr-fQ-99z">
                                 <rect key="frame" x="32" y="220" width="256" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="457704480.34181702">
                                     <!--2015-07-04 12:08:00 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OV-0W-uBf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OV-0W-uBf">
                                 <rect key="frame" x="27" y="146" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-nK-JLw">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-nK-JLw">
                                 <rect key="frame" x="-2" y="22" width="324" height="44"/>
                                 <items>
                                     <navigationItem title="時刻の設定" id="FTF-gZ-sbT">
