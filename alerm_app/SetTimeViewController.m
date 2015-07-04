@@ -37,4 +37,12 @@
 - (IBAction)BackButtonAction:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+- (IBAction)changeDate:(id)sender {
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc]init];
+    
+    df.dateFormat = @"HH:mm";
+    
+    NSLog(@"%@",[df stringFromDate:self.myDatePicker.date]);
+}
 @end
