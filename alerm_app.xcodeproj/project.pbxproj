@@ -16,6 +16,11 @@
 		4A5D7F131B47E58F00470A82 /* alerm_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D7F121B47E58F00470A82 /* alerm_appTests.m */; };
 		74398FF81B47EB35005F5E10 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74398FF71B47EB35005F5E10 /* alarm.mp3 */; };
 		74398FFA1B47EB7A005F5E10 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74398FF91B47EB7A005F5E10 /* AudioToolbox.framework */; };
+		74E0AE211B480BC400F464A4 /* MakeGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E0AE201B480BC400F464A4 /* MakeGroupViewController.m */; };
+		74E0AE241B480BDE00F464A4 /* AddMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E0AE231B480BDE00F464A4 /* AddMemberViewController.m */; };
+		74E0AE271B480BF700F464A4 /* GroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E0AE261B480BF700F464A4 /* GroupTableViewController.m */; };
+		74E0AE2A1B480C1700F464A4 /* GroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E0AE291B480C1700F464A4 /* GroupDetailViewController.m */; };
+		74E0AE2D1B480C2A00F464A4 /* SetTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E0AE2C1B480C2A00F464A4 /* SetTimeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,16 @@
 		4A5D7F121B47E58F00470A82 /* alerm_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = alerm_appTests.m; sourceTree = "<group>"; };
 		74398FF71B47EB35005F5E10 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		74398FF91B47EB7A005F5E10 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		74E0AE1F1B480BC400F464A4 /* MakeGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeGroupViewController.h; sourceTree = "<group>"; };
+		74E0AE201B480BC400F464A4 /* MakeGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeGroupViewController.m; sourceTree = "<group>"; };
+		74E0AE221B480BDE00F464A4 /* AddMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMemberViewController.h; sourceTree = "<group>"; };
+		74E0AE231B480BDE00F464A4 /* AddMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMemberViewController.m; sourceTree = "<group>"; };
+		74E0AE251B480BF700F464A4 /* GroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTableViewController.h; sourceTree = "<group>"; };
+		74E0AE261B480BF700F464A4 /* GroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTableViewController.m; sourceTree = "<group>"; };
+		74E0AE281B480C1700F464A4 /* GroupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupDetailViewController.h; sourceTree = "<group>"; };
+		74E0AE291B480C1700F464A4 /* GroupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupDetailViewController.m; sourceTree = "<group>"; };
+		74E0AE2B1B480C2A00F464A4 /* SetTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetTimeViewController.h; sourceTree = "<group>"; };
+		74E0AE2C1B480C2A00F464A4 /* SetTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetTimeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +107,16 @@
 				4A5D7EFD1B47E58E00470A82 /* ViewController.h */,
 				4A5D7EFE1B47E58E00470A82 /* ViewController.m */,
 				4A5D7F001B47E58E00470A82 /* Main.storyboard */,
+				74E0AE1F1B480BC400F464A4 /* MakeGroupViewController.h */,
+				74E0AE201B480BC400F464A4 /* MakeGroupViewController.m */,
+				74E0AE221B480BDE00F464A4 /* AddMemberViewController.h */,
+				74E0AE231B480BDE00F464A4 /* AddMemberViewController.m */,
+				74E0AE251B480BF700F464A4 /* GroupTableViewController.h */,
+				74E0AE261B480BF700F464A4 /* GroupTableViewController.m */,
+				74E0AE281B480C1700F464A4 /* GroupDetailViewController.h */,
+				74E0AE291B480C1700F464A4 /* GroupDetailViewController.m */,
+				74E0AE2B1B480C2A00F464A4 /* SetTimeViewController.h */,
+				74E0AE2C1B480C2A00F464A4 /* SetTimeViewController.m */,
 				4A5D7F031B47E58E00470A82 /* Images.xcassets */,
 				4A5D7F051B47E58E00470A82 /* LaunchScreen.xib */,
 				74398FF51B47EAFD005F5E10 /* Resources */,
@@ -236,8 +261,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A5D7EFF1B47E58E00470A82 /* ViewController.m in Sources */,
+				74E0AE241B480BDE00F464A4 /* AddMemberViewController.m in Sources */,
+				74E0AE2A1B480C1700F464A4 /* GroupDetailViewController.m in Sources */,
 				4A5D7EFC1B47E58E00470A82 /* AppDelegate.m in Sources */,
+				74E0AE2D1B480C2A00F464A4 /* SetTimeViewController.m in Sources */,
+				74E0AE211B480BC400F464A4 /* MakeGroupViewController.m in Sources */,
 				4A5D7EF91B47E58E00470A82 /* main.m in Sources */,
+				74E0AE271B480BF700F464A4 /* GroupTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
