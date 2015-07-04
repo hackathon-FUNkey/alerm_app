@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GroupDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>{
-
+@interface GroupDetailViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
 }
 - (IBAction)BackButtonAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
+
 
 @property (nonatomic) int userid;
 @property (nonatomic) int groupid;

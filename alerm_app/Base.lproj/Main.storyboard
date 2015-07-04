@@ -270,7 +270,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2nW-Ph-KXz"/>
                     <connections>
-                        <outlet property="myTableView" destination="gvn-lt-jTW" id="vJk-1P-Iqu"/>
+                        <outlet property="myTableView" destination="gvn-lt-jTW" id="u0k-SM-nEQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5f-Up-gYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
