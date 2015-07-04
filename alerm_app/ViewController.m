@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"alarm" ofType:@"mp3"];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(url), &sound);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,4 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)button:(id)sender {
+    AudioServicesPlaySystemSound(sound);
+}
 @end

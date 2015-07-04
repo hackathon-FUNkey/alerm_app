@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioServices.h>
+
+SystemSoundID sound;
 
 @interface ViewController : UIViewController
-
+- (IBAction)button:(id)sender;
 
 @end
 
