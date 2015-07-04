@@ -17,6 +17,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    if([[self getCurrentTime] isEqualToString:[self getMyTime]]){
+        NSLog(@"Same Time");
+    }
+    
+}
+
+- (NSString *)getCurrentTime {
+    // 現在日付を取得
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSUInteger flags;
+    NSDateComponents *comps;
+    
+    // 時・分・秒を取得
+    flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    comps = [calendar components:flags fromDate:now];
+    
+    NSInteger hour = comps.hour;
+    NSInteger minute = comps.minute;
+    NSInteger second = comps.second;
+    
+    NSString *currentTime = [NSString stringWithFormat:@"%ld時%ld分", hour, minute];
+    
+    NSLog(@"%ld時 %ld分", hour, minute);
+    
+    return currentTime;
+}
+
+- (NSString *)getMyTime {
+    NSString *myTime = @"19時20分";
+    
+    return myTime;
 }
 
 - (void)didReceiveMemoryWarning {
