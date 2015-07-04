@@ -18,10 +18,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-   // self.myTableView.dataSource = self;
+    self.myTableView.dataSource = self;
     self.myTableView.delegate = self;
     NSLog(@"%d",userid);
      NSLog(@"%d",groupid);
+    nameArray = [NSMutableArray array];
+    timeArray = [NSMutableArray array];
+    
+    NSString *url = @"http://175.184.46.172/server/groupTime.php";
+    NSString *param = [NSString stringWithFormat:@"data1=%d",7];
+    
+    NSMutableURLRequest *request;
+    request = [[NSMutableURLRequest alloc] init];
+    [request setHTTPMethod:@"POST"];
+    [request setURL: [NSURL URLWithString:url]];
+    [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
+    [request setTimeoutInterval:20];
+    [request setHTTPShouldHandleCookies:FALSE];
+    [request setHTTPBody:[param dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData* groupData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+ 
+    
+    NSArray *array = [NSJSONSerialization JSONObjectWithData:groupData options:NSJSONReadingAllowFragments error:nil];
+    NSLog(@"%@",array);
+    for(int i = 0;i < [array count];i++){
+        NSString *encode_name = [[array valueForKeyPath:@"name"] objectAtIndex:i];
+        NSString *encode_time = [[array valueForKeyPath:@"time"] objectAtIndex:i];
+        NSLog(@"%@", [encode_name stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]);
+        [nameArray addObject:[encode_name stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        [timeArray addObject:[encode_time stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    }
+
     
 }
 
@@ -34,9 +64,18 @@
     
     
     UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-        cell.textLabel.text = @"aa";
+    if(cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    for(int j=0;j<timeArray.count;j++){
+        if(indexPath.row == j){
+            NSString *str =
+            [NSString stringWithFormat:@"%@\t%@",[nameArray objectAtIndex:j],[timeArray objectAtIndex:j]];
+            cell.textLabel.text = [NSString stringWithFormat:@"%@\t\t\t\t\t%@",[nameArray objectAtIndex:j],[timeArray objectAtIndex:j]];
+            
 
+        }
+    }
     
     return cell;
 }

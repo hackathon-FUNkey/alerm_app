@@ -216,15 +216,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="in9-mS-8j2">
-                                <rect key="frame" x="16" y="141" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メンバーの起きる時間" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="in9-mS-8j2">
+                                <rect key="frame" x="16" y="141" width="205" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjh-kg-euG">
-                                <rect key="frame" x="16" y="70" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="16" y="70" width="139" height="30"/>
+                                <state key="normal" title="アラームセット">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -250,22 +250,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="in9-mS-8j2" firstAttribute="top" secondItem="Zjh-kg-euG" secondAttribute="bottom" constant="41" id="0bo-in-7SX"/>
-                            <constraint firstItem="in9-mS-8j2" firstAttribute="leading" secondItem="IyR-HI-9Gx" secondAttribute="leadingMargin" id="3fU-IR-GeW"/>
                             <constraint firstItem="UV1-zd-wME" firstAttribute="leading" secondItem="IyR-HI-9Gx" secondAttribute="leadingMargin" constant="-16" id="7e3-Bs-E5S"/>
-                            <constraint firstItem="gvn-lt-jTW" firstAttribute="top" secondItem="in9-mS-8j2" secondAttribute="bottom" constant="30" id="DbN-Ta-Bdk"/>
-                            <constraint firstItem="Zjh-kg-euG" firstAttribute="top" secondItem="UV1-zd-wME" secondAttribute="bottom" constant="6" id="IfB-9c-AUP"/>
-                            <constraint firstItem="W1q-X2-UA4" firstAttribute="top" secondItem="gvn-lt-jTW" secondAttribute="bottom" id="Jik-N0-pOL"/>
+                            <constraint firstItem="W1q-X2-UA4" firstAttribute="top" secondItem="gvn-lt-jTW" secondAttribute="bottom" id="9W2-8E-qk6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gvn-lt-jTW" secondAttribute="trailing" constant="-15" id="DJ6-Ng-RYM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="in9-mS-8j2" secondAttribute="trailing" constant="83" id="GQA-pN-dZQ"/>
+                            <constraint firstItem="gvn-lt-jTW" firstAttribute="top" secondItem="in9-mS-8j2" secondAttribute="bottom" constant="30" id="H3j-xn-xvL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zjh-kg-euG" secondAttribute="trailing" constant="149" id="HA5-4N-BeU"/>
+                            <constraint firstItem="Zjh-kg-euG" firstAttribute="top" secondItem="UV1-zd-wME" secondAttribute="bottom" constant="6" id="IwI-ND-vTf"/>
+                            <constraint firstItem="gvn-lt-jTW" firstAttribute="leading" secondItem="IyR-HI-9Gx" secondAttribute="leadingMargin" constant="-16" id="JPd-fg-Pnr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UV1-zd-wME" secondAttribute="trailing" constant="-16" id="MyI-zM-WFM"/>
-                            <constraint firstItem="Zjh-kg-euG" firstAttribute="top" secondItem="UV1-zd-wME" secondAttribute="bottom" constant="6" id="NQu-VF-671"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gvn-lt-jTW" secondAttribute="trailing" constant="-15" id="PR4-Tg-Ich"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zjh-kg-euG" secondAttribute="trailing" constant="242" id="PiM-GB-zsO"/>
-                            <constraint firstItem="gvn-lt-jTW" firstAttribute="leading" secondItem="IyR-HI-9Gx" secondAttribute="leadingMargin" constant="-16" id="SHt-n8-cFv"/>
+                            <constraint firstItem="in9-mS-8j2" firstAttribute="leading" secondItem="IyR-HI-9Gx" secondAttribute="leadingMargin" id="Qhs-Bc-nKr"/>
                             <constraint firstItem="UV1-zd-wME" firstAttribute="top" secondItem="UhH-d9-BCU" secondAttribute="bottom" id="ZPK-Z7-egc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="in9-mS-8j2" secondAttribute="trailing" constant="246" id="ba3-Z2-2UI"/>
-                            <constraint firstItem="Zjh-kg-euG" firstAttribute="leading" secondItem="IyR-HI-9Gx" secondAttribute="leadingMargin" id="jpZ-OQ-FGU"/>
-                            <constraint firstItem="in9-mS-8j2" firstAttribute="top" secondItem="Zjh-kg-euG" secondAttribute="bottom" constant="41" id="vVB-3p-KYv"/>
-                            <constraint firstItem="gvn-lt-jTW" firstAttribute="top" secondItem="in9-mS-8j2" secondAttribute="bottom" constant="30" id="wi4-7J-03D"/>
+                            <constraint firstItem="gvn-lt-jTW" firstAttribute="top" secondItem="in9-mS-8j2" secondAttribute="bottom" constant="30" id="ZpA-VH-pXw"/>
+                            <constraint firstItem="Zjh-kg-euG" firstAttribute="leading" secondItem="IyR-HI-9Gx" secondAttribute="leadingMargin" id="dUD-Ul-Bgx"/>
+                            <constraint firstItem="in9-mS-8j2" firstAttribute="top" secondItem="Zjh-kg-euG" secondAttribute="bottom" constant="41" id="dWV-lD-nm6"/>
+                            <constraint firstItem="in9-mS-8j2" firstAttribute="top" secondItem="Zjh-kg-euG" secondAttribute="bottom" constant="41" id="q59-FL-w9V"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2nW-Ph-KXz"/>
