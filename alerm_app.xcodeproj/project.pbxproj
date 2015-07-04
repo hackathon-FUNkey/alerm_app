@@ -14,6 +14,8 @@
 		4A5D7F041B47E58E00470A82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5D7F031B47E58E00470A82 /* Images.xcassets */; };
 		4A5D7F071B47E58E00470A82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5D7F051B47E58E00470A82 /* LaunchScreen.xib */; };
 		4A5D7F131B47E58F00470A82 /* alerm_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D7F121B47E58F00470A82 /* alerm_appTests.m */; };
+		74398FF81B47EB35005F5E10 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74398FF71B47EB35005F5E10 /* alarm.mp3 */; };
+		74398FFA1B47EB7A005F5E10 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74398FF91B47EB7A005F5E10 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		4A5D7F0C1B47E58F00470A82 /* alerm_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alerm_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5D7F111B47E58F00470A82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A5D7F121B47E58F00470A82 /* alerm_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = alerm_appTests.m; sourceTree = "<group>"; };
+		74398FF71B47EB35005F5E10 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
+		74398FF91B47EB7A005F5E10 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74398FFA1B47EB7A005F5E10 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +68,7 @@
 		4A5D7EEA1B47E58E00470A82 = {
 			isa = PBXGroup;
 			children = (
+				74398FF91B47EB7A005F5E10 /* AudioToolbox.framework */,
 				4A5D7EF51B47E58E00470A82 /* alerm_app */,
 				4A5D7F0F1B47E58F00470A82 /* alerm_appTests */,
 				4A5D7EF41B47E58E00470A82 /* Products */,
@@ -88,6 +94,7 @@
 				4A5D7F001B47E58E00470A82 /* Main.storyboard */,
 				4A5D7F031B47E58E00470A82 /* Images.xcassets */,
 				4A5D7F051B47E58E00470A82 /* LaunchScreen.xib */,
+				74398FF51B47EAFD005F5E10 /* Resources */,
 				4A5D7EF61B47E58E00470A82 /* Supporting Files */,
 			);
 			path = alerm_app;
@@ -117,6 +124,14 @@
 				4A5D7F111B47E58F00470A82 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74398FF51B47EAFD005F5E10 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				74398FF71B47EB35005F5E10 /* alarm.mp3 */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74398FF81B47EB35005F5E10 /* alarm.mp3 in Resources */,
 				4A5D7F021B47E58E00470A82 /* Main.storyboard in Resources */,
 				4A5D7F071B47E58E00470A82 /* LaunchScreen.xib in Resources */,
 				4A5D7F041B47E58E00470A82 /* Images.xcassets in Resources */,
@@ -416,6 +432,7 @@
 				4A5D7F181B47E58F00470A82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A5D7F191B47E58F00470A82 /* Build configuration list for PBXNativeTarget "alerm_appTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +441,7 @@
 				4A5D7F1B1B47E58F00470A82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
