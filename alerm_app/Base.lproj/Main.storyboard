@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o6l-SN-Nkn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o6l-SN-Nkn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -75,7 +75,11 @@
                                                 <action selector="BackButtonAction:" destination="MMR-D5-jCo" id="5gD-ZL-mAU"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="完了" id="Ucr-5C-29x"/>
+                                        <barButtonItem key="rightBarButtonItem" title="完了" id="Ucr-5C-29x">
+                                            <connections>
+                                                <action selector="saveButtonAction:" destination="MMR-D5-jCo" id="QEF-Go-Xej"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -89,6 +93,9 @@
                                 <rect key="frame" x="34" y="131" width="240" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputText:" destination="MMR-D5-jCo" eventType="editingDidEndOnExit" id="YIT-B0-2EO"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="メンバー" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVz-BN-9KU">
                                 <rect key="frame" x="16" y="196" width="68" height="21"/>
@@ -137,6 +144,10 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="pVL-hw-MGx"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myTableView" destination="QY3-Hy-cyG" id="lYB-ZI-uCh"/>
+                        <outlet property="myTextField" destination="Ha6-jJ-poO" id="1Or-1x-WSr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdF-VC-glv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -286,7 +297,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="保存" id="uh6-cx-mmh">
                                             <connections>
-                                                <segue destination="XHy-eD-7wK" kind="push" id="Re2-z3-pnk"/>
+                                                <action selector="SaveTimeButtonAction:" destination="o7i-KP-NUt" id="QQt-la-DG6"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -346,7 +357,11 @@
                                                 <action selector="BackButtonAction:" destination="nHr-u3-I5b" id="Jbu-9P-7hc"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="完了" id="SPG-nb-ybQ"/>
+                                        <barButtonItem key="rightBarButtonItem" title="完了" id="SPG-nb-ybQ">
+                                            <connections>
+                                                <segue destination="MMR-D5-jCo" kind="push" identifier="addMember" id="acv-Dm-xfk"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -364,6 +379,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WCA-VE-vRk"/>
+                    <connections>
+                        <outlet property="myTableView" destination="QBD-Sk-hDr" id="gcn-Ju-Wdw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IM0-9o-WBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -394,6 +412,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Re2-z3-pnk"/>
+        <segue reference="acv-Dm-xfk"/>
     </inferredMetricsTieBreakers>
 </document>

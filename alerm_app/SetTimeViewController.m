@@ -37,6 +37,29 @@
 - (IBAction)BackButtonAction:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (IBAction)SaveTimeButtonAction:(id)sender {
+    NSDateFormatter *df = [[NSDateFormatter alloc]init];
+    
+    df.dateFormat = @"HH:mm";
+    
+    NSString *url = @"http://175.184.46.172/server/timeSave.php";
+    NSString *time = [df stringFromDate:self.myDatePicker.date];
+    NSString *param = [NSString stringWithFormat:@"data1=%d&data2=%d&data3=%@", 7, 4, time];
+    
+    NSMutableURLRequest *request;
+    request = [[NSMutableURLRequest alloc] init];
+    [request setHTTPMethod:@"POST"];
+    [request setURL: [NSURL URLWithString:url]];
+    [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
+    [request setTimeoutInterval:20];
+    [request setHTTPShouldHandleCookies:FALSE];
+    [request setHTTPBody:[param dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+}
 - (IBAction)changeDate:(id)sender {
     
     NSDateFormatter *df = [[NSDateFormatter alloc]init];

@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddMemberViewController : UIViewController
+@interface AddMemberViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
+    NSMutableArray *mtArray;
+    NSMutableArray *flagArray;
+}
 - (IBAction)BackButtonAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
 @end

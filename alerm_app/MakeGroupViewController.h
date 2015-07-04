@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MakeGroupViewController : UIViewController
+@interface MakeGroupViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
+     NSMutableArray *flagArray;
+     NSMutableArray *selectNameArray;
+    NSString *mytext;
+}
 - (IBAction)BackButtonAction:(id)sender;
+- (IBAction)saveButtonAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (weak, nonatomic) IBOutlet UITextField *myTextField;
+- (IBAction)inputText:(id)sender;
+
+
+@property (nonatomic) NSMutableArray *flagArray;
 
 @end
