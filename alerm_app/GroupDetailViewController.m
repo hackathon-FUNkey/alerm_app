@@ -13,11 +13,40 @@
 @end
 
 @implementation GroupDetailViewController
+@synthesize userid,groupid;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+   // self.myTableView.dataSource = self;
+    self.myTableView.delegate = self;
+    NSLog(@"%d",userid);
+     NSLog(@"%d",groupid);
+    
 }
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier =@"Cell";
+    
+    
+    UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+        cell.textLabel.text = @"aa";
+
+    
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

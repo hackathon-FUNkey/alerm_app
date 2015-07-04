@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GroupTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface GroupTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>{
+    NSMutableArray *mtArray;
+    NSMutableArray *idArray;
+    int groupid;
+}
 - (IBAction)BackButtonAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
