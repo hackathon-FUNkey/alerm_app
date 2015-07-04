@@ -13,10 +13,16 @@
 @end
 
 @implementation GroupDetailViewController
+@synthesize userid,groupid;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.myTableView.dataSource = self;
+    self.myTableView.delegate = self;
+    NSLog(@"%d",userid);
+     NSLog(@"%d",groupid);
+    
 }
 
 - (void)didReceiveMemoryWarning {
