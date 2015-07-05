@@ -14,6 +14,7 @@
 @end
 
 @implementation AddMemberViewController
+@synthesize groupName;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,6 +37,7 @@
         [mtArray addObject:[encode_msg stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         [flagArray addObject:[NSNumber numberWithInteger:0]];
     }
+    NSLog(@"%@",groupName);
     
     [self.myTableView setBackgroundColor:[UIColor clearColor]];
 
@@ -90,6 +92,12 @@
     if ([[segue identifier] isEqualToString:@"addMember"]){
         MakeGroupViewController *view = (MakeGroupViewController*)[segue destinationViewController];
         view.flagArray = flagArray;
+        view.mytext = groupName;
+    }
+    if ([[segue identifier] isEqualToString:@"moveAddmember"]){
+        MakeGroupViewController*view = (MakeGroupViewController*)[segue destinationViewController];
+        view.mytext = groupName;
+        
     }
 }
 

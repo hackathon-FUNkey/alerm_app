@@ -14,5 +14,6 @@
 }
 - (IBAction)BackButtonAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (nonatomic) NSString *groupName;
 
 @end
