@@ -136,7 +136,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="nHr-u3-I5b" kind="push" id="26g-aC-IuO"/>
+                                    <segue destination="nHr-u3-I5b" kind="push" identifier="moveAddmember" id="26g-aC-IuO"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groupname.png" translatesAutoresizingMaskIntoConstraints="NO" id="rds-mp-FGp">

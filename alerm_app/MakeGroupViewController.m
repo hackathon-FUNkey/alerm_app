@@ -7,13 +7,14 @@
 //
 
 #import "MakeGroupViewController.h"
+#import "AddMemberViewController.h"
 
 @interface MakeGroupViewController ()
 
 @end
 
 @implementation MakeGroupViewController
-@synthesize flagArray;
+@synthesize flagArray,groupName;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,6 +25,7 @@
     // Do any additional setup after loading the view.
     for(int j=0;j<flagArray.count;j++){
         NSLog(@"%@",[flagArray objectAtIndex:j]);
+        if([[flagArray objectAtIndex:j] intValue] ==1)count++;
     }
     
     NSURL *url = [NSURL URLWithString:@"http://175.184.46.172/server/usersList.php"];
@@ -39,6 +41,8 @@
             [selectNameArray addObject:[encode_msg stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         }
     }
+    NSLog(@"group:%@",groupName);
+    self.myTextField.text = groupName;
     
     [self.myTableView setBackgroundColor:[UIColor clearColor]];
     
@@ -91,6 +95,19 @@
     NSLog(@"%@",mytext);
     NSLog(@"%@",selectNameArray);
     
+    if(mytext==nil||count==0){
+        
+        // 生成と同時に各種設定も完了させる例
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"エラー"
+                              message:@"未記入事項があります"
+                              delegate:self
+                              cancelButtonTitle:nil
+                              otherButtonTitles:@"OK", nil];
+        [alert show];
+        
+    }else{
+    
     NSString *selectname = @"";
     selectname = [selectname stringByAppendingString:[selectNameArray objectAtIndex:0]];
     for(int k =1;k<selectNameArray.count;k++){
@@ -117,6 +134,8 @@
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     [self performSegueWithIdentifier:@"savegroup" sender:self];
+        
+    }
 }
 
 
@@ -124,4 +143,14 @@
 - (IBAction)inputText:(id)sender {
     mytext = self.myTextField.text;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"moveAddmember"]){
+        AddMemberViewController *view = (AddMemberViewController*)[segue destinationViewController];
+        NSLog(@"%@",mytext);
+        view.groupName = mytext;
+        
+    }
+}
+
 @end
