@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface SetTimeViewController : UIViewController
-- (IBAction)BackButtonAction:(id)sender;
 - (IBAction)SaveTimeButtonAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UIDatePicker *myDatePicker;
 - (IBAction)changeDate:(id)sender;
+- (IBAction)BackButtonAction:(id)sender;
 
 
 

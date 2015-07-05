@@ -84,13 +84,10 @@
     
     return cell;
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
-
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -108,6 +105,8 @@
 */
 
 - (IBAction)BackButtonAction:(id)sender {
-    [self performSegueWithIdentifier:@"setTime" sender:self];
+    //[self.navigationController popToViewController:GroupTableViewController animated:YES];
+    [self performSegueWithIdentifier:@"toTable" sender:self];
 }
+
 @end

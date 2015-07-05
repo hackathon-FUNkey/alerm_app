@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o6l-SN-Nkn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o6l-SN-Nkn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -211,6 +211,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="jIg-2P-WhB">
                                             <connections>
                                                 <action selector="BackButtonAction:" destination="xXR-BB-mSP" id="5Se-JL-uQn"/>
+                                                <segue destination="vXZ-lx-hvc" kind="push" identifier="toTop" id="CF8-nP-7g1"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -274,7 +275,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="o7i-KP-NUt" kind="modal" identifier="setTime" id="SlB-8T-Q5P"/>
+                                    <segue destination="o7i-KP-NUt" kind="push" identifier="setTime" id="SlB-8T-Q5P"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UV1-zd-wME">
@@ -283,7 +284,7 @@
                                     <navigationItem title="グループ詳細" id="14I-WO-aGq">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="Tyv-es-dlY">
                                             <connections>
-                                                <action selector="BackButtonAction:" destination="XHy-eD-7wK" id="Ax3-c8-7wS"/>
+                                                <segue destination="xXR-BB-mSP" kind="push" identifier="toTable" id="m2q-Ys-alg"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -345,10 +346,9 @@
                                 <rect key="frame" x="-2" y="20" width="324" height="44"/>
                                 <items>
                                     <navigationItem title="時刻の設定" id="FTF-gZ-sbT">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="NBl-bY-mHp">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="Xob-Jf-fMC">
                                             <connections>
-                                                <action selector="BackButtonAction:" destination="o7i-KP-NUt" id="9LN-QW-n7N"/>
-                                                <segue destination="XHy-eD-7wK" kind="modal" identifier="backDetail" id="G37-y9-N7k"/>
+                                                <action selector="BackButtonAction:" destination="o7i-KP-NUt" id="JNw-Tq-lnt"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="保存" id="uh6-cx-mmh">
@@ -386,7 +386,7 @@
                     <navigationItem key="navigationItem" id="yuO-2b-6PA"/>
                     <connections>
                         <outlet property="myDatePicker" destination="Rhr-fQ-99z" id="re9-OY-xSC"/>
-                        <segue destination="XHy-eD-7wK" kind="modal" identifier="saveTime" id="Nt4-Sh-aRH"/>
+                        <segue destination="XHy-eD-7wK" kind="push" identifier="saveTime" id="Nt4-Sh-aRH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTI-BQ-vpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -489,8 +489,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="cz0-ws-uFs"/>
+        <segue reference="m2q-Ys-alg"/>
+        <segue reference="CF8-nP-7g1"/>
         <segue reference="GMJ-96-Jkk"/>
-        <segue reference="Fuh-M3-Xgk"/>
-        <segue reference="G37-y9-N7k"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -115,7 +115,8 @@
  */
 
 - (IBAction)BackButtonAction:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
+    [self performSegueWithIdentifier:@"toTop" sender:self];
 }
 
 - (void)didReceiveMemoryWarning {

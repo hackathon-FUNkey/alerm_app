@@ -34,9 +34,6 @@
 }
 */
 
-- (IBAction)BackButtonAction:(id)sender {
-}
-
 - (IBAction)SaveTimeButtonAction:(id)sender {
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
     
@@ -68,5 +65,9 @@
     df.dateFormat = @"HH:mm";
     
     NSLog(@"%@",[df stringFromDate:self.myDatePicker.date]);
+}
+
+- (IBAction)BackButtonAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end
