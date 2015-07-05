@@ -7,6 +7,7 @@
 //
 
 #import "GroupDetailViewController.h"
+#import "GroupTableViewController.h"
 
 @interface GroupDetailViewController ()
 
@@ -84,13 +85,10 @@
     
     return cell;
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
-
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -108,6 +106,7 @@
 */
 
 - (IBAction)BackButtonAction:(id)sender {
-    [self performSegueWithIdentifier:@"setTime" sender:self];
+    [self.navigationController popViewControllerAnimated:YES];    
 }
+
 @end
