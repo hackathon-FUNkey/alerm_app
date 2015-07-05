@@ -114,6 +114,8 @@
     NSURLResponse *response = nil;
     NSError *error = nil;
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    [self performSegueWithIdentifier:@"savegroup" sender:self];
 }
 
 

@@ -147,6 +147,7 @@
                     <connections>
                         <outlet property="myTableView" destination="QY3-Hy-cyG" id="lYB-ZI-uCh"/>
                         <outlet property="myTextField" destination="Ha6-jJ-poO" id="1Or-1x-WSr"/>
+                        <segue destination="xXR-BB-mSP" kind="modal" identifier="savegroup" id="Fuh-M3-Xgk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdF-VC-glv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,7 +229,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="o7i-KP-NUt" kind="push" id="SlB-8T-Q5P"/>
+                                    <segue destination="o7i-KP-NUt" kind="modal" identifier="setTime" id="SlB-8T-Q5P"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UV1-zd-wME">
@@ -295,6 +296,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="NBl-bY-mHp">
                                             <connections>
                                                 <action selector="BackButtonAction:" destination="o7i-KP-NUt" id="9LN-QW-n7N"/>
+                                                <segue destination="XHy-eD-7wK" kind="modal" identifier="backDetail" id="G37-y9-N7k"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="保存" id="uh6-cx-mmh">
@@ -328,6 +330,7 @@
                     <navigationItem key="navigationItem" id="yuO-2b-6PA"/>
                     <connections>
                         <outlet property="myDatePicker" destination="Rhr-fQ-99z" id="re9-OY-xSC"/>
+                        <segue destination="XHy-eD-7wK" kind="modal" identifier="saveTime" id="Nt4-Sh-aRH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTI-BQ-vpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -414,6 +417,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="G37-y9-N7k"/>
         <segue reference="acv-Dm-xfk"/>
+        <segue reference="Fuh-M3-Xgk"/>
     </inferredMetricsTieBreakers>
 </document>
