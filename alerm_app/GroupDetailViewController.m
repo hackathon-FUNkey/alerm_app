@@ -54,6 +54,8 @@
         [timeArray addObject:[encode_time stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     }
     
+    [self.myTableView setBackgroundColor:[UIColor clearColor]];
+    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -77,6 +79,8 @@
 
         }
     }
+    
+    [cell setBackgroundColor:[UIColor clearColor]];
     
     return cell;
 }

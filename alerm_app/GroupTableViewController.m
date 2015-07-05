@@ -50,6 +50,7 @@
         [idArray addObject:[encode_id stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     }
     
+    [self.myTableView setBackgroundColor:[UIColor clearColor]];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -74,6 +75,8 @@
             cell.textLabel.text = [mtArray objectAtIndex:j];
         }
     }
+    
+    [cell setBackgroundColor:[UIColor clearColor]];
     
     return cell;
 }

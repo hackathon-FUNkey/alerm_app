@@ -40,7 +40,7 @@
         }
     }
     
-    
+    [self.myTableView setBackgroundColor:[UIColor clearColor]];
     
 }
 
@@ -62,6 +62,7 @@
         }
     }
     
+    [cell setBackgroundColor:[UIColor clearColor]];
     
     return cell;
 }
