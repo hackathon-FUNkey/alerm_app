@@ -22,6 +22,6 @@
 
 
 @property (nonatomic) NSMutableArray *flagArray;
-@property (nonatomic) NSString *groupName;
+@property (nonatomic) NSString *mytext;
 
 @end

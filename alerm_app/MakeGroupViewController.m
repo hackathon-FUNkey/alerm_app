@@ -14,7 +14,7 @@
 @end
 
 @implementation MakeGroupViewController
-@synthesize flagArray,groupName;
+@synthesize flagArray,mytext;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,8 +41,8 @@
             [selectNameArray addObject:[encode_msg stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         }
     }
-    NSLog(@"group:%@",groupName);
-    self.myTextField.text = groupName;
+    NSLog(@"group:%@",mytext);
+    self.myTextField.text = mytext;
     
     [self.myTableView setBackgroundColor:[UIColor clearColor]];
     
@@ -92,9 +92,9 @@
 }
 
 - (IBAction)saveButtonAction:(id)sender {
-    NSLog(@"%d",count);
+    NSLog(@"%lu", (unsigned long)[mytext length]);
     
-    if([mytext length]==0||count==0){
+    if([mytext length]==0 || count==0){
         
         // 生成と同時に各種設定も完了させる例
         UIAlertView *alert = [[UIAlertView alloc]

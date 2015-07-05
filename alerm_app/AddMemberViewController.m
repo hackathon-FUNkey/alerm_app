@@ -92,11 +92,11 @@
     if ([[segue identifier] isEqualToString:@"addMember"]){
         MakeGroupViewController *view = (MakeGroupViewController*)[segue destinationViewController];
         view.flagArray = flagArray;
-        view.groupName = groupName;
+        view.mytext = groupName;
     }
     if ([[segue identifier] isEqualToString:@"moveAddmember"]){
         MakeGroupViewController*view = (MakeGroupViewController*)[segue destinationViewController];
-        view.groupName = groupName;
+        view.mytext = groupName;
         
     }
 }
