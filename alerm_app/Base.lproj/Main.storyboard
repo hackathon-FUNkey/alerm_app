@@ -94,7 +94,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="dCV-cp-2Qt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="595"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5G-qQ-UFn">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5G-qQ-UFn">
                                 <rect key="frame" x="0.0" y="18" width="320" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
@@ -204,7 +204,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="hZZ-e3-WL4">
                                 <rect key="frame" x="0.0" y="-46" width="329" height="614"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSv-qh-zo4">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSv-qh-zo4">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="グループ一覧" id="Mas-Iy-GjW">
@@ -277,7 +277,7 @@
                                     <segue destination="o7i-KP-NUt" kind="modal" identifier="setTime" id="SlB-8T-Q5P"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UV1-zd-wME">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UV1-zd-wME">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="グループ詳細" id="14I-WO-aGq">
@@ -341,7 +341,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="th2-nN-RTV">
                                 <rect key="frame" x="0.0" y="64" width="337" height="504"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-nK-JLw">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-nK-JLw">
                                 <rect key="frame" x="-2" y="20" width="324" height="44"/>
                                 <items>
                                     <navigationItem title="時刻の設定" id="FTF-gZ-sbT">
@@ -412,7 +412,7 @@
                                 <rect key="frame" x="0.0" y="62" width="320" height="463"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-q7-X7k">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-q7-X7k">
                                 <rect key="frame" x="0.0" y="18" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="メンバー追加" id="W8u-3O-C5t">
@@ -489,8 +489,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GMJ-96-Jkk"/>
-        <segue reference="Fuh-M3-Xgk"/>
         <segue reference="G37-y9-N7k"/>
+        <segue reference="acv-Dm-xfk"/>
+        <segue reference="Fuh-M3-Xgk"/>
     </inferredMetricsTieBreakers>
 </document>
