@@ -36,6 +36,8 @@
         [mtArray addObject:[encode_msg stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         [flagArray addObject:[NSNumber numberWithInteger:0]];
     }
+    
+    [self.myTableView setBackgroundColor:[UIColor clearColor]];
 
 }
 
@@ -58,6 +60,7 @@
      }
     }
 
+    [cell setBackgroundColor:[UIColor clearColor]];
     
     return cell;
 }
