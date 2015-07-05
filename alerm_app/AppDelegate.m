@@ -13,7 +13,6 @@
 @end
 
 @implementation AppDelegate
-NSString *currentTime;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -24,38 +23,12 @@ NSString *currentTime;
 
 - (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"alarm" ofType:@"mp3"];
-    NSURL *url = [NSURL fileURLWithPath:path];
-    AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(url), &sound);
-    
-    // 現在日付を取得
-    NSDate *now = [NSDate date];
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSUInteger flags;
-    NSDateComponents *comps;
-    
-    // 時・分・秒を取得
-    flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
-    comps = [calendar components:flags fromDate:now];
-    NSInteger hour = comps.hour;
-    NSInteger minute = comps.minute;
-    currentTime = [NSString stringWithFormat:@"%ld時%ld分", hour, minute];
-    
-    if([currentTime isEqualToString:[self getMyTime]]){
-        AudioServicesPlaySystemSound(sound);
-        NSLog(@"Same Time");
-    }
-
-    
-    NSLog(@"%ld時%ld分", hour, minute);
-    NSLog([self getMyTime]);
-    
     // ダウンロード完了
     completionHandler(UIBackgroundFetchResultNoData);
 }
 
 - (NSString *)getMyTime {
-    NSString *myTime = @"1時43分";
+    NSString *myTime = @"9時17分";
     
     return myTime;
 }

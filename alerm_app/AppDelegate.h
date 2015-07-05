@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioServices.h>
+#include <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
-    NSString *currentTime;
     SystemSoundID sound;
 }
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) NSString *currentTime;
 
 @end
 

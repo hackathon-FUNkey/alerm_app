@@ -14,6 +14,7 @@
 		4A5D7F041B47E58E00470A82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5D7F031B47E58E00470A82 /* Images.xcassets */; };
 		4A5D7F071B47E58E00470A82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5D7F051B47E58E00470A82 /* LaunchScreen.xib */; };
 		4A5D7F131B47E58F00470A82 /* alerm_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D7F121B47E58F00470A82 /* alerm_appTests.m */; };
+		4A5D7F251B48ABA900470A82 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5D7F241B48ABA900470A82 /* AVFoundation.framework */; };
 		74398FF81B47EB35005F5E10 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74398FF71B47EB35005F5E10 /* alarm.mp3 */; };
 		74398FFA1B47EB7A005F5E10 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74398FF91B47EB7A005F5E10 /* AudioToolbox.framework */; };
 		74E0AE211B480BC400F464A4 /* MakeGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E0AE201B480BC400F464A4 /* MakeGroupViewController.m */; };
@@ -47,6 +48,7 @@
 		4A5D7F0C1B47E58F00470A82 /* alerm_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alerm_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5D7F111B47E58F00470A82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A5D7F121B47E58F00470A82 /* alerm_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = alerm_appTests.m; sourceTree = "<group>"; };
+		4A5D7F241B48ABA900470A82 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		74398FF71B47EB35005F5E10 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		74398FF91B47EB7A005F5E10 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		74E0AE1F1B480BC400F464A4 /* MakeGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeGroupViewController.h; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5D7F251B48ABA900470A82 /* AVFoundation.framework in Frameworks */,
 				74398FFA1B47EB7A005F5E10 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +86,7 @@
 		4A5D7EEA1B47E58E00470A82 = {
 			isa = PBXGroup;
 			children = (
+				4A5D7F241B48ABA900470A82 /* AVFoundation.framework */,
 				74398FF91B47EB7A005F5E10 /* AudioToolbox.framework */,
 				4A5D7EF51B47E58E00470A82 /* alerm_app */,
 				4A5D7F0F1B47E58F00470A82 /* alerm_appTests */,
