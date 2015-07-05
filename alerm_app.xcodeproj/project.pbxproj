@@ -98,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5D7F251B48ABA900470A82 /* AVFoundation.framework in Frameworks */,
 				74398FFA1B47EB7A005F5E10 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +116,7 @@
 		4A5D7EEA1B47E58E00470A82 = {
 			isa = PBXGroup;
 			children = (
+				4A5D7F241B48ABA900470A82 /* AVFoundation.framework */,
 				74398FF91B47EB7A005F5E10 /* AudioToolbox.framework */,
 				4A5D7EF51B47E58E00470A82 /* alerm_app */,
 				4A5D7F0F1B47E58F00470A82 /* alerm_appTests */,
