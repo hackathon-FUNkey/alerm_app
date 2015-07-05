@@ -14,6 +14,10 @@
 
 @implementation GroupDetailViewController
 @synthesize userid,groupid;
+NSString *currentTime;
+bool isChecked;
+NSInteger myHour;
+NSInteger myMinutes;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,9 +25,11 @@
     self.myTableView.dataSource = self;
     self.myTableView.delegate = self;
     NSLog(@"%d",userid);
-     NSLog(@"%d",groupid);
+    NSLog(@"%d",groupid);
     nameArray = [NSMutableArray array];
     timeArray = [NSMutableArray array];
+
+    
     
     NSString *url = @"http://175.184.46.172/server/groupTime.php";
     NSString *param = [NSString stringWithFormat:@"data1=%d",7];
@@ -55,6 +61,77 @@
     }
     
     [self.myTableView setBackgroundColor:[UIColor clearColor]];
+    
+    isChecked = NO;
+    myHour = 13;
+    myMinutes = 37;
+    
+    // 現在日付を取得
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSUInteger flags;
+    NSDateComponents *comps;
+    
+    // 時・分・秒を取得
+    flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    comps = [calendar components:flags fromDate:now];
+    NSInteger hour = comps.hour;
+    NSInteger minute = comps.minute;
+    currentTime = [NSString stringWithFormat:@"%ld時%ld分", hour, minute];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"alarm" ofType:@"mp3"];
+    NSURL *url2 = [NSURL fileURLWithPath:path];
+    AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(url2), &sound);
+    
+    if(!isChecked && hour <= myHour && minute <= myMinutes){
+        [self performSelector:@selector(alert) withObject:nil afterDelay:5];
+    }
+    
+    //NSLog([self getCurrentTime]);
+    //NSLog([self getMyTime]);
+}
+
+-(void)alertView:(UIAlertView*)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(buttonIndex == 0){
+        isChecked = YES;
+        AudioServicesDisposeSystemSoundID(sound);
+        NSLog(@"OK");
+    }
+}
+
+- (void)alert {
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"アラーム"
+                          message:nil
+                          delegate:self
+                          cancelButtonTitle:nil otherButtonTitles:nil];
+    alert.delegate = self;
+    [alert addButtonWithTitle:@"OK"];
+    
+    // 現在日付を取得
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSUInteger flags;
+    NSDateComponents *comps;
+    
+    // 時・分・秒を取得
+    flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    comps = [calendar components:flags fromDate:now];
+    NSInteger hour = comps.hour;
+    NSInteger minute = comps.minute;
+    currentTime = [NSString stringWithFormat:@"%ld時%ld分", hour, minute];
+    NSLog(currentTime);
+    
+    NSString *myTime = [NSString stringWithFormat:@"%ld時%ld分", (long)myHour, (long)myMinutes];
+    
+    if([currentTime isEqualToString:myTime] && isChecked == NO) {
+        NSLog(@"same time");
+        AudioServicesPlaySystemSound(sound);
+        [alert show];
+    }else{
+        [self performSelector:@selector(viewDidLoad) withObject:nil afterDelay:5];
+    }
     
 }
 

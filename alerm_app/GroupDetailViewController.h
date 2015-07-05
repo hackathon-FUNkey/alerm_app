@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
-@interface GroupDetailViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
+@interface GroupDetailViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate>{
     NSMutableArray *nameArray;
     NSMutableArray *timeArray;
+    SystemSoundID sound;
 }
 - (IBAction)BackButtonAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
