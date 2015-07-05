@@ -92,10 +92,9 @@
 }
 
 - (IBAction)saveButtonAction:(id)sender {
-    NSLog(@"%@",mytext);
-    NSLog(@"%@",selectNameArray);
+    NSLog(@"%d",count);
     
-    if(mytext==nil||count==0){
+    if([mytext length]==0||count==0){
         
         // 生成と同時に各種設定も完了させる例
         UIAlertView *alert = [[UIAlertView alloc]
