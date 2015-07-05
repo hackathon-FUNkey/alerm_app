@@ -35,7 +35,6 @@
 */
 
 - (IBAction)BackButtonAction:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)SaveTimeButtonAction:(id)sender {
@@ -59,6 +58,8 @@
     NSURLResponse *response = nil;
     NSError *error = nil;
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    [self performSegueWithIdentifier:@"saveTime" sender:self];
 }
 - (IBAction)changeDate:(id)sender {
     

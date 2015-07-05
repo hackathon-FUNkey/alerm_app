@@ -28,6 +28,8 @@
     NSString *url = @"http://175.184.46.172/server/groupTime.php";
     NSString *param = [NSString stringWithFormat:@"data1=%d",7];
     
+    NSLog(@"Call GroupDetailView DidLoad");
+    
     NSMutableURLRequest *request;
     request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"POST"];
@@ -43,20 +45,19 @@
  
     
     NSArray *array = [NSJSONSerialization JSONObjectWithData:groupData options:NSJSONReadingAllowFragments error:nil];
-    NSLog(@"%@",array);
+    //NSLog(@"%@",array);
     for(int i = 0;i < [array count];i++){
         NSString *encode_name = [[array valueForKeyPath:@"name"] objectAtIndex:i];
         NSString *encode_time = [[array valueForKeyPath:@"time"] objectAtIndex:i];
-        NSLog(@"%@", [encode_name stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]);
+        //NSLog(@"%@", [encode_name stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]);
         [nameArray addObject:[encode_name stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         [timeArray addObject:[encode_time stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     }
-
     
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return nameArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -67,7 +68,7 @@
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    for(int j=0;j<timeArray.count;j++){
+    for(int j=0;j<nameArray.count;j++){
         if(indexPath.row == j){
             NSString *str =
             [NSString stringWithFormat:@"%@\t%@",[nameArray objectAtIndex:j],[timeArray objectAtIndex:j]];
@@ -103,6 +104,6 @@
 */
 
 - (IBAction)BackButtonAction:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self performSegueWithIdentifier:@"setTime" sender:self];
 }
 @end
