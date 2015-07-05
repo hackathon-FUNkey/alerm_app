@@ -145,13 +145,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     for(int j=0;j<nameArray.count;j++){
         if(indexPath.row == j){
-            NSString *str =
-            [NSString stringWithFormat:@"%@\t%@",[nameArray objectAtIndex:j],[timeArray objectAtIndex:j]];
-            cell.textLabel.text = [NSString stringWithFormat:@"%@\t\t\t\t\t%@",[nameArray objectAtIndex:j],[timeArray objectAtIndex:j]];
+            cell.textLabel.text = [NSString stringWithFormat:@"%@",[nameArray objectAtIndex:j]];
+            cell.detailTextLabel.text =[NSString stringWithFormat:@"%@",[timeArray objectAtIndex:j]];
             
 
         }

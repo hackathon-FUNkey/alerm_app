@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="yne-Im-DDn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="yne-Im-DDn">
                                 <rect key="frame" x="0.0" y="0.0" width="329" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfo-PO-l6m">
@@ -33,7 +33,7 @@
                                     <segue destination="MMR-D5-jCo" kind="push" id="GMJ-96-Jkk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGy-ww-6vs">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGy-ww-6vs">
                                 <rect key="frame" x="171" y="377" width="133" height="133"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="133" id="0IA-fX-SyV"/>
@@ -47,7 +47,7 @@
                                     <segue destination="xXR-BB-mSP" kind="push" id="nhv-Pd-4qX"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_rogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wdI-ix-xoi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_rogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wdI-ix-xoi">
                                 <rect key="frame" x="27" y="73" width="266" height="266"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="266" id="K6c-a0-CCa"/>
@@ -104,7 +104,7 @@
                                                 <action selector="BackButtonAction:" destination="MMR-D5-jCo" id="5gD-ZL-mAU"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="完了" id="Ucr-5C-29x">
+                                        <barButtonItem key="rightBarButtonItem" title="保存" id="Ucr-5C-29x">
                                             <connections>
                                                 <action selector="saveButtonAction:" destination="MMR-D5-jCo" id="QEF-Go-Xej"/>
                                             </connections>
@@ -201,7 +201,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="hZZ-e3-WL4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="hZZ-e3-WL4">
                                 <rect key="frame" x="0.0" y="-46" width="329" height="614"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSv-qh-zo4">
@@ -217,7 +217,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="U23-I4-4mf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="U23-I4-4mf">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -263,25 +263,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="3ov-zW-5cb">
                                 <rect key="frame" x="0.0" y="0.0" width="347" height="586"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メンバーの起きる時間" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="in9-mS-8j2">
-                                <rect key="frame" x="16" y="141" width="205" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjh-kg-euG">
-                                <rect key="frame" x="16" y="70" width="139" height="30"/>
-                                <state key="normal" title="アラームセット">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="o7i-KP-NUt" kind="push" identifier="setTime" id="SlB-8T-Q5P"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UV1-zd-wME">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="グループ詳細" id="14I-WO-aGq">
+                                    <navigationItem id="14I-WO-aGq">
+                                        <nil key="title"/>
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="Tyv-es-dlY">
                                             <connections>
                                                 <segue destination="xXR-BB-mSP" kind="push" identifier="toTable" id="m2q-Ys-alg"/>
@@ -290,30 +276,45 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gvn-lt-jTW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gvn-lt-jTW">
                                 <rect key="frame" x="0.0" y="192" width="319" height="376"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="member.png" translatesAutoresizingMaskIntoConstraints="NO" id="1JT-cD-tsT">
+                                <rect key="frame" x="0.0" y="119" width="221" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="5mI-hT-gHb"/>
+                                    <constraint firstAttribute="height" constant="65" id="nTf-sw-lh8"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjh-kg-euG">
+                                <rect key="frame" x="229" y="91" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="GwL-zg-t93"/>
+                                    <constraint firstAttribute="width" constant="75" id="ZMo-v9-A1i"/>
+                                </constraints>
+                                <state key="normal" title="アラームセット" image="tokei.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="o7i-KP-NUt" kind="push" identifier="setTime" id="SlB-8T-Q5P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Zjh-kg-euG" firstAttribute="trailing" secondItem="IyR-HI-9Gx" secondAttribute="trailingMargin" id="1vc-V7-TXs"/>
                             <constraint firstItem="UV1-zd-wME" firstAttribute="leading" secondItem="IyR-HI-9Gx" secondAttribute="leadingMargin" constant="-16" id="7e3-Bs-E5S"/>
                             <constraint firstItem="W1q-X2-UA4" firstAttribute="top" secondItem="gvn-lt-jTW" secondAttribute="bottom" id="9W2-8E-qk6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gvn-lt-jTW" secondAttribute="trailing" constant="-15" id="DJ6-Ng-RYM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="in9-mS-8j2" secondAttribute="trailing" constant="83" id="GQA-pN-dZQ"/>
-                            <constraint firstItem="gvn-lt-jTW" firstAttribute="top" secondItem="in9-mS-8j2" secondAttribute="bottom" constant="30" id="H3j-xn-xvL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zjh-kg-euG" secondAttribute="trailing" constant="149" id="HA5-4N-BeU"/>
-                            <constraint firstItem="Zjh-kg-euG" firstAttribute="top" secondItem="UV1-zd-wME" secondAttribute="bottom" constant="6" id="IwI-ND-vTf"/>
+                            <constraint firstItem="1JT-cD-tsT" firstAttribute="leading" secondItem="IyR-HI-9Gx" secondAttribute="leadingMargin" constant="-16" id="FFI-UR-pzg"/>
+                            <constraint firstItem="Zjh-kg-euG" firstAttribute="top" secondItem="UV1-zd-wME" secondAttribute="bottom" constant="27" id="FwS-in-FBV"/>
                             <constraint firstItem="gvn-lt-jTW" firstAttribute="leading" secondItem="IyR-HI-9Gx" secondAttribute="leadingMargin" constant="-16" id="JPd-fg-Pnr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UV1-zd-wME" secondAttribute="trailing" constant="-16" id="MyI-zM-WFM"/>
-                            <constraint firstItem="in9-mS-8j2" firstAttribute="leading" secondItem="IyR-HI-9Gx" secondAttribute="leadingMargin" id="Qhs-Bc-nKr"/>
                             <constraint firstItem="3ov-zW-5cb" firstAttribute="top" secondItem="IyR-HI-9Gx" secondAttribute="topMargin" id="Qoa-wt-M7d"/>
+                            <constraint firstItem="gvn-lt-jTW" firstAttribute="top" secondItem="1JT-cD-tsT" secondAttribute="bottom" constant="8" id="RI2-dY-xif"/>
                             <constraint firstItem="UV1-zd-wME" firstAttribute="top" secondItem="UhH-d9-BCU" secondAttribute="bottom" id="ZPK-Z7-egc"/>
-                            <constraint firstItem="gvn-lt-jTW" firstAttribute="top" secondItem="in9-mS-8j2" secondAttribute="bottom" constant="30" id="ZpA-VH-pXw"/>
-                            <constraint firstItem="Zjh-kg-euG" firstAttribute="leading" secondItem="IyR-HI-9Gx" secondAttribute="leadingMargin" id="dUD-Ul-Bgx"/>
-                            <constraint firstItem="in9-mS-8j2" firstAttribute="top" secondItem="Zjh-kg-euG" secondAttribute="bottom" constant="41" id="dWV-lD-nm6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3ov-zW-5cb" secondAttribute="trailing" constant="-43" id="ptg-8x-yZo"/>
-                            <constraint firstItem="in9-mS-8j2" firstAttribute="top" secondItem="Zjh-kg-euG" secondAttribute="bottom" constant="41" id="q59-FL-w9V"/>
                             <constraint firstItem="3ov-zW-5cb" firstAttribute="leading" secondItem="IyR-HI-9Gx" secondAttribute="leadingMargin" constant="-16" id="vm0-zc-esn"/>
                             <constraint firstAttribute="bottomMargin" secondItem="3ov-zW-5cb" secondAttribute="bottom" constant="-18" id="xwc-dr-Znn"/>
                         </constraints>
@@ -325,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5f-Up-gYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="1116"/>
+            <point key="canvasLocation" x="954" y="1129"/>
         </scene>
         <!--Set Time View Controller-->
         <scene sceneID="I6t-At-vXg">
@@ -339,7 +340,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="th2-nN-RTV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="th2-nN-RTV">
                                 <rect key="frame" x="0.0" y="64" width="337" height="504"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" ambiguous="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-nK-JLw">
@@ -482,6 +483,7 @@
         <image name="icon_rogo.png" width="450" height="450"/>
         <image name="member.png" width="750" height="200"/>
         <image name="prus_botan.png" width="180" height="180"/>
+        <image name="tokei.png" width="464" height="464"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -489,9 +491,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="acv-Dm-xfk"/>
-        <segue reference="Fuh-M3-Xgk"/>
         <segue reference="cz0-ws-uFs"/>
+        <segue reference="Fuh-M3-Xgk"/>
+        <segue reference="acv-Dm-xfk"/>
         <segue reference="CF8-nP-7g1"/>
     </inferredMetricsTieBreakers>
 </document>

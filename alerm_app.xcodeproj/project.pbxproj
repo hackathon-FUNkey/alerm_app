@@ -37,6 +37,7 @@
 		74E0AE271B480BF700F464A4 /* GroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E0AE261B480BF700F464A4 /* GroupTableViewController.m */; };
 		74E0AE2A1B480C1700F464A4 /* GroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E0AE291B480C1700F464A4 /* GroupDetailViewController.m */; };
 		74E0AE2D1B480C2A00F464A4 /* SetTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E0AE2C1B480C2A00F464A4 /* SetTimeViewController.m */; };
+		881A611A1B48F0B300E23C45 /* tokei.png in Resources */ = {isa = PBXBuildFile; fileRef = 881A61191B48F0B300E23C45 /* tokei.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		74E0AE291B480C1700F464A4 /* GroupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupDetailViewController.m; sourceTree = "<group>"; };
 		74E0AE2B1B480C2A00F464A4 /* SetTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetTimeViewController.h; sourceTree = "<group>"; };
 		74E0AE2C1B480C2A00F464A4 /* SetTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetTimeViewController.m; sourceTree = "<group>"; };
+		881A61191B48F0B300E23C45 /* tokei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tokei.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A5D7F251B48ABA900470A82 /* AVFoundation.framework in Frameworks */,
 				74398FFA1B47EB7A005F5E10 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,7 +117,6 @@
 		4A5D7EEA1B47E58E00470A82 = {
 			isa = PBXGroup;
 			children = (
-				4A5D7F241B48ABA900470A82 /* AVFoundation.framework */,
 				74398FF91B47EB7A005F5E10 /* AudioToolbox.framework */,
 				4A5D7EF51B47E58E00470A82 /* alerm_app */,
 				4A5D7F0F1B47E58F00470A82 /* alerm_appTests */,
@@ -189,6 +189,7 @@
 		740D8AEC1B48BC6B008D2C78 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				881A61191B48F0B300E23C45 /* tokei.png */,
 				740D8AED1B48BC84008D2C78 /* alarm-01.png */,
 				740D8AEE1B48BC84008D2C78 /* alarm-02.png */,
 				740D8AEF1B48BC84008D2C78 /* alarm.png */,
@@ -313,6 +314,7 @@
 				740D8AFF1B48BC84008D2C78 /* alarm.png in Resources */,
 				740D8AFE1B48BC84008D2C78 /* alarm-02.png in Resources */,
 				4A5D7F021B47E58E00470A82 /* Main.storyboard in Resources */,
+				881A611A1B48F0B300E23C45 /* tokei.png in Resources */,
 				740D8B071B48BC84008D2C78 /* icon_rogo.png in Resources */,
 				740D8B001B48BC84008D2C78 /* alarm01.png in Resources */,
 				740D8B081B48BC84008D2C78 /* in_botan.png in Resources */,
