@@ -12,6 +12,7 @@
      NSMutableArray *flagArray;
      NSMutableArray *selectNameArray;
     NSString *mytext;
+    int count;
 }
 - (IBAction)BackButtonAction:(id)sender;
 - (IBAction)saveButtonAction:(id)sender;
@@ -21,5 +22,6 @@
 
 
 @property (nonatomic) NSMutableArray *flagArray;
+@property (nonatomic) NSString *mytext;
 
 @end

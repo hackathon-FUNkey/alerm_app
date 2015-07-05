@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o6l-SN-Nkn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o6l-SN-Nkn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -94,7 +94,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="dCV-cp-2Qt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="595"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5G-qQ-UFn">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5G-qQ-UFn">
                                 <rect key="frame" x="0.0" y="18" width="320" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
@@ -136,7 +136,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="nHr-u3-I5b" kind="push" id="26g-aC-IuO"/>
+                                    <segue destination="nHr-u3-I5b" kind="push" identifier="moveAddmember" id="26g-aC-IuO"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groupname.png" translatesAutoresizingMaskIntoConstraints="NO" id="rds-mp-FGp">
@@ -182,7 +182,7 @@
                     <connections>
                         <outlet property="myTableView" destination="QY3-Hy-cyG" id="lYB-ZI-uCh"/>
                         <outlet property="myTextField" destination="Ha6-jJ-poO" id="1Or-1x-WSr"/>
-                        <segue destination="xXR-BB-mSP" kind="modal" identifier="savegroup" id="Fuh-M3-Xgk"/>
+                        <segue destination="xXR-BB-mSP" kind="push" identifier="savegroup" id="Fuh-M3-Xgk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdF-VC-glv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -204,7 +204,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="hZZ-e3-WL4">
                                 <rect key="frame" x="0.0" y="-46" width="329" height="614"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSv-qh-zo4">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSv-qh-zo4">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="グループ一覧" id="Mas-Iy-GjW">
@@ -278,7 +278,7 @@
                                     <segue destination="o7i-KP-NUt" kind="push" identifier="setTime" id="SlB-8T-Q5P"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UV1-zd-wME">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UV1-zd-wME">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="グループ詳細" id="14I-WO-aGq">
@@ -342,7 +342,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="th2-nN-RTV">
                                 <rect key="frame" x="0.0" y="64" width="337" height="504"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-nK-JLw">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-nK-JLw">
                                 <rect key="frame" x="-2" y="20" width="324" height="44"/>
                                 <items>
                                     <navigationItem title="時刻の設定" id="FTF-gZ-sbT">
@@ -412,7 +412,7 @@
                                 <rect key="frame" x="0.0" y="62" width="320" height="463"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-q7-X7k">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-q7-X7k">
                                 <rect key="frame" x="0.0" y="18" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="メンバー追加" id="W8u-3O-C5t">
@@ -489,9 +489,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="acv-Dm-xfk"/>
+        <segue reference="Fuh-M3-Xgk"/>
         <segue reference="cz0-ws-uFs"/>
-        <segue reference="m2q-Ys-alg"/>
         <segue reference="CF8-nP-7g1"/>
-        <segue reference="GMJ-96-Jkk"/>
     </inferredMetricsTieBreakers>
 </document>
