@@ -7,7 +7,6 @@
 //
 
 #import "GroupDetailViewController.h"
-#import "GroupTableViewController.h"
 
 @interface GroupDetailViewController ()
 
@@ -106,7 +105,8 @@
 */
 
 - (IBAction)BackButtonAction:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];    
+    //[self.navigationController popToViewController:GroupTableViewController animated:YES];
+    [self performSegueWithIdentifier:@"toTable" sender:self];
 }
 
 @end

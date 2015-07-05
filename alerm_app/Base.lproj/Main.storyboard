@@ -211,6 +211,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="jIg-2P-WhB">
                                             <connections>
                                                 <action selector="BackButtonAction:" destination="xXR-BB-mSP" id="5Se-JL-uQn"/>
+                                                <segue destination="vXZ-lx-hvc" kind="push" identifier="toTop" id="CF8-nP-7g1"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -283,7 +284,7 @@
                                     <navigationItem title="グループ詳細" id="14I-WO-aGq">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="Tyv-es-dlY">
                                             <connections>
-                                                <action selector="BackButtonAction:" destination="XHy-eD-7wK" id="i8T-a4-SOT"/>
+                                                <segue destination="xXR-BB-mSP" kind="push" identifier="toTable" id="m2q-Ys-alg"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -488,8 +489,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Nt4-Sh-aRH"/>
+        <segue reference="cz0-ws-uFs"/>
+        <segue reference="m2q-Ys-alg"/>
+        <segue reference="CF8-nP-7g1"/>
         <segue reference="GMJ-96-Jkk"/>
-        <segue reference="Fuh-M3-Xgk"/>
     </inferredMetricsTieBreakers>
 </document>
